@@ -10,8 +10,9 @@ On your local machine, you will need to:
 You will need to provide the following details on **variables.tf**: 
 1. The AWS region which you are working on. 
 1. The targeted public key file which is hosted on your local machine. 
+    * Refer [here](https://docs.rightscale.com/faq/How_Do_I_Generate_My_Own_SSH_Key_Pair.html) on how to generate key pair. 
 1. The AWS credential file, which is created once you have configured the AWS logins on your local machine.
-1. The AWS profile, which can be queried with `aws configure list`. 
+1. The AWS profile, which can be queried with `cat ~/.aws/config`. 
 
 ## What the Terraform script does: 
 1. Upload the selected public key into [AWS key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws). 
