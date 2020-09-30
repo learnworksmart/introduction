@@ -1,0 +1,5 @@
+# NOTE: Handlers will only be fired for tasks which report a changed state.
+- name: restart ssh
+  systemd:
+    name: sshd
+    state: restarted

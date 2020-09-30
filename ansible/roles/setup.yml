@@ -1,0 +1,12 @@
+# common include add new user and config ssh service.
+- name: Setup common 
+  hosts: all
+  become: yes
+  roles:
+    - role: common
+
+- name: Setup webserver 
+  hosts: webserver
+  become: yes
+  roles:
+    - role: webserver

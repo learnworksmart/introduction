@@ -1,0 +1,15 @@
+all:
+  hosts:
+    13.250.65.165: #<provide EC2 ip here>
+    54.169.74.6:   #<provide EC2 ip here>
+  vars:
+    ansible_user: ubuntu #common login username for access the Ubuntu EC2 instances
+    ansible_python_interpreter: /usr/bin/python3
+    users: #login credentials for the new user account
+      - name: new_user
+        user_pass: password
+        user_pass_salt: salt
+        ssh_public_key: /Users/learnworksmart/.ssh/new_user.pub
+webserver:
+  hosts:
+   54.169.74.6: #<provide the EC2 ip which meant to be webserver>

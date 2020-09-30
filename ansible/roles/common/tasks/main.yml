@@ -1,0 +1,5 @@
+- name: Add User Account 
+  import_tasks: add_user.yml
+
+- name: Configure SSH
+  import_tasks: config_ssh.yml

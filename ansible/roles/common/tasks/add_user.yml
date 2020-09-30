@@ -1,0 +1,20 @@
+### Create user
+- name: Add new user with sudo access
+  user:
+    name: "{{ item.name }}"
+    groups: root, sudo
+    password: "{{ item.user_pass | password_hash('sha512', item.user_pass_salt) }}"
+    create_home: yes
+    shell: /bin/bash
+    expires: -1
+    update_password: on_create #on_create will only set the password for newly created users.
+    state: present
+  with_items: "{{ users }}"
+
+- name: Set authorized key
+  authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ lookup('file', '{{ item.ssh_public_key }}') }}"
+    state: present
+    exclusive: True
+  with_items: "{{ users }}"
