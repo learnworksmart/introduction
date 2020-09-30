@@ -1,5 +1,5 @@
-# Ansible Playbook tutorial 
-This exercise is to apply 2 sets of configurations across a group of EC2 instances running on Ubuntu. The first configuration `common` will be applied to all EC2 while the other configuration `webserver` only applicable to specify EC2. 
+# Introduction to Ansible Playbook  
+This exercise is to apply 2 sets of configurations across a group of EC2 instances running on Ubuntu. The first configuration `common` will be applied to all EC2 while the other configuration `webserver` only applicable to specify EC2. SSH key-based authentication is adopted for this exercise.
 
 ## Pre-requisites
 1. On your local machine [install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
@@ -9,8 +9,6 @@ This exercise is to apply 2 sets of configurations across a group of EC2 instanc
 
 You will need to provide the following details in **inventory.yml**:
 1. Supply the `ansible_user` with the common login username for accessing the EC2 instances. 
-1. Supply the associated `ansible_user` SSH private key
-	* `ssh-add "<SSH private key>"`
 1. The EC2 instances IP address under `all` and `webserver` hosts. 
 1. The new account's login username, password and and SSH public key, which will be created on all EC2 instances. 
 

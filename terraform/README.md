@@ -1,5 +1,6 @@
-# Terraform + AWS tutorial 
+# Introduction to Terraform + AWS tutorial 
 This exercise is to provision a publicly accessible EC2 instance using Terraform. 
+* SSH key-based authentication is adopted for this exercise.
 
 ## Pre-requisites
 On your local machine, you will need to: 
