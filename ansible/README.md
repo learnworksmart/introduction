@@ -13,9 +13,12 @@ You will need to provide the following details in **inventory.yml**:
 1. The new account's login username, password and and SSH public key, which will be created on all EC2 instances. 
 
 ### What the Ansible-playbook definition files do:
-1. Create a new account, with root access, on all the EC2 instances. 
-1. Perform SSH configurations on all the EC2 instances. 
-1. Install Apache2 on a targeted EC2 instance.
+1. All required inputs are managed under `inventory.yml` file. 
+1. The `common` configurations:
+	* create a new user account
+	* apply SSH configurations 
+1. The `webserver` configuration:
+	* install apache2 
 
 ### To apply the configurations
 1. Run `ansible-playbook -i inventory setup.yml`
