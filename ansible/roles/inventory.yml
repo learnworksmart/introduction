@@ -1,4 +1,4 @@
-all:
+common:
   hosts:
     13.250.65.165: #<provide EC2 ip here>
     54.169.74.6:   #<provide EC2 ip here>

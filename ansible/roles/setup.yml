@@ -1,6 +1,6 @@
 # common include add new user and config ssh service.
 - name: Setup common 
-  hosts: all
+  hosts: common
   become: yes
   roles:
     - role: common
