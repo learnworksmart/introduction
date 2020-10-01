@@ -19,6 +19,7 @@ You will need to provide the following details in **inventory.yml**:
 
 ### To apply the configurations
 1. Run `ansible-playbook -i inventory setup.yml`
+
 ![image](https://user-images.githubusercontent.com/71627887/94677800-16d11400-0350-11eb-9ad3-be8ac64fdfc2.png)
 
 ## Encountered Error
