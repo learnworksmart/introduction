@@ -26,7 +26,6 @@ You will need to provide the following details in **inventory.yml**:
 ![image](https://user-images.githubusercontent.com/71627887/94677800-16d11400-0350-11eb-9ad3-be8ac64fdfc2.png)
 
 ## Encountered Error
-
 ```
 [WARNING]: Platform linux on host XX.XX.XX.XX is using the discovered Python interpreter at
 /usr/bin/python, but future installation of another Python interpreter could change the meaning of
