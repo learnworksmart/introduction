@@ -3,7 +3,7 @@ This exercise is to apply 2 sets of configurations across a group of EC2 instanc
 
 ## Pre-requisites
 1. On your local machine [install Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-1. Have 2 publicly accessible Ubuntu EC2 instances running. 
+1. Have 2 publicly accessible Ubuntu EC2 instances running, and allow port 22 (SSH) and port (80) HTTP access. 
 1. A common login credential that can SSH into both EC2 instances with root access. 
 1. Generate another set of new [key-pair](https://docs.rightscale.com/faq/How_Do_I_Generate_My_Own_SSH_Key_Pair.html) which will be used for creating a new account.   
 
