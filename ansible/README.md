@@ -20,6 +20,10 @@ You will need to provide the following details in **inventory.yml**:
 1. The EC2 instances IP address under `all` and `webserver` hosts. 
 1. The new account's login username, password and and SSH public key, which will be created on all EC2 instances. 
 
+### Components (with version) used in this exercise
+* Ansible: `2.10.1`
+* Python: `3.8.2`
+
 ### To apply the configurations
 1. Run `ansible-playbook -i inventory setup.yml`
 

@@ -16,6 +16,10 @@ You will need to provide the following details on **variables.tf**:
 1. The AWS credential file, which is created once you have configured the AWS logins on your local machine.
 1. The AWS profile, which can be queried with `cat ~/.aws/config`. 
 
+### Components (with version) used in this exercise
+* Terraform: `v0.13.3`
+* AWS CLI: `aws-cli/2.0.52`
+
 ## What the Terraform definition files do: 
 1. Upload the selected public key into [AWS key pairs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#how-to-generate-your-own-key-and-import-it-to-aws). 
 1. Create a security group that allows inbound SSH, port 22, access. 
