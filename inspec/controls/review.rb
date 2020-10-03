@@ -1,5 +1,3 @@
-# lsof -i -P -n | grep LISTEN | grep *: | awk '{print $1,$9}' | sort -u
-
 control 'Ensure ports other than 22(SSH), 53(local bind), and 80(http) are not listening' do
     title 'Ensure ports other than 22(SSH), 53(local bind), and 80(http) are not listening'
 
@@ -33,8 +31,8 @@ control 'Ensure ssh and apache2 are enabled and running.' do
     end
 end
 
-control 'Ensure apache2 security.conf file exists and its version banner has been disabled.' do
-	title 'Ensure apache2 security.conf file exists and its version banner has been disabled.'
+control 'Ensure apache2 security.conf file exists and config for hiding its version banner has been applied.' do
+	title 'Ensure apache2 security.conf file exists and config for hiding its version banner has been applied.'
 
     describe file('/etc/apache2/conf-enabled/security.conf') do
         it { should exist }
