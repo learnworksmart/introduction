@@ -22,9 +22,9 @@ end
 control 'Ensure ssh and apache2 are enabled and running.' do
 	title 'Ensure ssh and apache2 are enabled and running.'
 
-    packages = ['ssh', 'apache2']
-    packages.each do |package|
-        describe systemd_service(package) do
+    services = ['ssh', 'apache2']
+    services.each do |service|
+        describe systemd_service(service) do
             it { should be_enabled }
             it { should be_running }
         end
