@@ -1,14 +1,14 @@
 # Introduction to Docker 
 To demonstrate how we use simplify our web application deployment with Docker, we will be carried out the exercises in the following order:  
-1. Deploy our web application on a local machine. 
+1. Deploy our web application onto our local machine. 
 1. Dockerised our web application and upload it to [Docker Hub](https://hub.docker.com/). 
-	* Explain the use of Dockerfile. 
-1. Deploy our web application via Docker on an EC2 instance. 
+	* Explain the use of [Dockerfile](https://docs.docker.com/engine/reference/builder/). 
+1. Deploy our web application on an EC2 instance. 
 	* This shows how we easily deploy the same application in a different environment with Docker. 
 
 ## Pre-requisites
 1. Sign up a [Docker Hub](https://hub.docker.com/) account. 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) on your local machine, and login with your Docker Hub account.
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) on our local machine, and login with your Docker Hub account.
 1. To run our web application we need to install [python3](https://www.python.org/downloads/) on our local machine  
 1. Access to an Ubuntu EC2 instance which is [installed with docker](https://docs.docker.com/engine/install/ubuntu/). 
 	* SSH key-based authentication is adopted for accessing the EC2 instance.
@@ -18,7 +18,7 @@ To demonstrate how we use simplify our web application deployment with Docker, w
 * (Local machine) Docker Desktop: `2.4.1`
 * (Local machine) Python: `3.8.2`
 
-## Deploy our web application on a local machine.
+## Deploy our web application onto our local machine
 1. Download this repository onto our local machine: 
 	* `git clone https://github.com/learnworksmart/introduction.git`
 1. Browse to the `docker` -> `src` folder, which consist our web application setup files. 
@@ -50,7 +50,7 @@ Login to [Docker Hub](https://hub.docker.com/) and create a new repository. For 
 	1. `docker push learnworksmart/newblog:dev`
 1. Visit your **Docker Hub newblog** respository and you should see the upload docker image. 
 
-## Deploy our web application via Docker on an EC2 instance.
+## Deploy our web application on an EC2 instance. 
 1. Access our EC2 instance, and verify that **docker** has been installed. 
 	* `which docker`
 1. Download the docker image and run it as a container: 
