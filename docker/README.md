@@ -1,13 +1,14 @@
 # Introduction to Docker 
-This exercise demonstrate how we use Docker to manage and simplify the deployment for our web application. 
-It will be carried out in the following order:  
+To demonstrate how we use simplify our web application deployment with Docker, we will be carried out the exercises in the following order:  
 1. Deploy our web application on a local machine. 
-1. Dockerised our web application and upload it to [Docker Hub](https://hub.docker.com/).  
+1. Dockerised our web application and upload it to [Docker Hub](https://hub.docker.com/). 
+	* Explain the use of Dockerfile. 
 1. Deploy our web application via Docker on an EC2 instance. 
+	* This shows how we easily deploy the same application in a different environment with Docker. 
 
 ## Pre-requisites
-1. Sign up a Docker Hub](https://hub.docker.com/) account. 
-1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) on your local machine, and login with your docker account.
+1. Sign up a [Docker Hub](https://hub.docker.com/) account. 
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop) on your local machine, and login with your Docker Hub account.
 1. To run our web application we need to install [python3](https://www.python.org/downloads/) on our local machine  
 1. Access to an Ubuntu EC2 instance which is [installed with docker](https://docs.docker.com/engine/install/ubuntu/). 
 	* SSH key-based authentication is adopted for accessing the EC2 instance.
