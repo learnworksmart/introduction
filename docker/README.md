@@ -30,7 +30,8 @@ To demonstrate how we use simplify our web application deployment with Docker, w
 	* `sudo python3 init_db.py`, this will create a `database.db` file. 
 	* `sudo flask run --host=0.0.0.0 --port=80`
 1. Open a web browser and visit our web application `http://127.0.0.1`.
-1. Terminate the web application.  
+1. Terminate the web application. 
+1. Remove the `database.db` file. 
 
 ## Dockerised our web application and upload it to **Docker Hub**
 1. On our local machine, browse to the `docker` folder which consists of our `Dockerfile`. 
@@ -46,13 +47,13 @@ Login to [Docker Hub](https://hub.docker.com/) and create a new repository. For 
 * use our docker hub username, which is **learnworksmart**
 * name the repository as **newblog** and tag it as `dev`.
 1. Upload our local image to **Docker Hub**
-	1. `docker tag sampleapp-docker-dev learnworksmart/newblog:dev`
-	1. `docker push learnworksmart/newblog:dev`
+	1. `sudo docker tag sampleapp-docker-dev learnworksmart/newblog:dev`
+	1. `sudo docker push learnworksmart/newblog:dev`
 1. Visit your **Docker Hub newblog** respository and you should see the upload docker image. 
 
 ## Deploy our web application on an EC2 instance. 
 1. Access our EC2 instance, and verify that **docker** has been installed. 
 	* `which docker`
 1. Download the docker image and run it as a container: 
-	* `docker pull learnworksmart/newblog:dev`
-	* `docker run --rm -it -p 80:80 --detach --name app learnworksmart/newblog:dev` 
+	* `sudo docker pull learnworksmart/newblog:dev`
+	* `sudo docker run --rm -it -p 80:80 --detach --name app learnworksmart/newblog:dev` 
